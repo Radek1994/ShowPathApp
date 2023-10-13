@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Points
+
+  Created by Radoslaw Slesarczyk on 12/10/2023.
+  
+*/
+
+"points.title" = "Punkty";
+"points.list.real" = "Prawdziwe";
+"points.list.fake" = "Fałszywe";

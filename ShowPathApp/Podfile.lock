@@ -1,13 +1,7 @@
 PODS:
-  - Alamofire (5.8.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - RxAlamofire (6.1.1):
-    - RxAlamofire/Core (= 6.1.1)
-  - RxAlamofire/Core (6.1.1):
-    - Alamofire (~> 5.4)
-    - RxSwift (~> 6.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -22,7 +16,6 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - RxAlamofire (= 6.1.1)
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - SnapKit (= 5.6.0)
@@ -31,9 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - ObjcExceptionBridging
-    - RxAlamofire
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -42,9 +33,7 @@ SPEC REPOS:
     - XCGLogger
 
 SPEC CHECKSUMS:
-  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
@@ -52,6 +41,6 @@ SPEC CHECKSUMS:
   Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 63faeff8ef66f8fb2ca72a04575c970963c407af
+PODFILE CHECKSUM: 87210564dafd02a57181b66e4b844a1f9c220e4e
 
 COCOAPODS: 1.12.1

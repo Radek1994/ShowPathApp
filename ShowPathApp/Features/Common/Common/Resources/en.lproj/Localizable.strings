@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Common
+
+  Created by Radoslaw Slesarczyk on 09/09/2023.
+  
+*/
+
+"common.loading" = "Loading";
+"common.all" = "All";
+"common.error" = "Error";
+"errors.serverError" = "Server is not available";
+"errors.networkError" = "Your Internet connection is unavailable";

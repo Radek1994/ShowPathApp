@@ -1,13 +1,43 @@
 platform :ios, '14.0'
 use_frameworks!
+inhibit_all_warnings!
 
-target 'ShowPathApp' do
-  pod 'RxAlamofire', '6.1.1'
+workspace 'ShowPathApp.xcworkspace'
+
+def showpathapp_pods
+end
+
+def common_pods
   pod 'RxCocoa', '6.5.0'
   pod 'RxSwift', '6.5.0'
   pod 'SnapKit', '5.6.0'
   pod 'Swinject', '2.8.3'
   pod 'XCGLogger', '7.0.1'
+end
+
+def points_pods
+  pod 'RxCocoa', '6.5.0'
+  pod 'RxSwift', '6.5.0'
+  pod 'SnapKit', '5.6.0'
+  pod 'Swinject', '2.8.3'
+  pod 'XCGLogger', '7.0.1'
+end
+
+target 'ShowPathApp' do
+  project 'ShowPathApp.xcodeproj'
+  showpathapp_pods
+  common_pods
+  points_pods
+end
+
+target 'Common' do
+  project 'Features/Common/Common.xcodeproj'
+  common_pods
+end
+
+target 'Points' do
+  project 'Features/Points/Points.xcodeproj'
+  points_pods
 end
 
 post_install do |installer|
