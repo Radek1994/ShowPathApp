@@ -19,6 +19,16 @@
 		843080062AD75838009279E9 /* PointsMockRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080052AD75838009279E9 /* PointsMockRemoteRepository.swift */; };
 		843080092AD7589F009279E9 /* PointsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080082AD7589F009279E9 /* PointsAssembly.swift */; };
 		8430800B2AD758AB009279E9 /* PointsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430800A2AD758AB009279E9 /* PointsContracts.swift */; };
+		84AE87092AD9A10F0087446E /* PointsPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87082AD9A10F0087446E /* PointsPaths.swift */; };
+		84AE870B2AD9A11B0087446E /* PointsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE870A2AD9A11B0087446E /* PointsRouter.swift */; };
+		84AE872C2AD9A5340087446E /* PointsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87252AD9A5330087446E /* PointsListViewModel.swift */; };
+		84AE872D2AD9A5340087446E /* PointsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87262AD9A5330087446E /* PointsListViewController.swift */; };
+		84AE872E2AD9A5340087446E /* PointsListTabItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87282AD9A5340087446E /* PointsListTabItemTableViewCell.swift */; };
+		84AE872F2AD9A5340087446E /* PointsListTabItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87292AD9A5340087446E /* PointsListTabItemViewModel.swift */; };
+		84AE87302AD9A5340087446E /* PointsListTabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE872A2AD9A5340087446E /* PointsListTabItemViewController.swift */; };
+		84AE87312AD9A5340087446E /* PointsListTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE872B2AD9A5340087446E /* PointsListTabItem.swift */; };
+		84AE87342AD9ABA30087446E /* PointsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87332AD9ABA30087446E /* PointsDetailsViewController.swift */; };
+		84AE87362AD9ABB10087446E /* PointsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87352AD9ABB10087446E /* PointsDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +60,16 @@
 		843080052AD75838009279E9 /* PointsMockRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsMockRemoteRepository.swift; sourceTree = "<group>"; };
 		843080082AD7589F009279E9 /* PointsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsAssembly.swift; sourceTree = "<group>"; };
 		8430800A2AD758AB009279E9 /* PointsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsContracts.swift; sourceTree = "<group>"; };
+		84AE87082AD9A10F0087446E /* PointsPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsPaths.swift; sourceTree = "<group>"; };
+		84AE870A2AD9A11B0087446E /* PointsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsRouter.swift; sourceTree = "<group>"; };
+		84AE87252AD9A5330087446E /* PointsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListViewModel.swift; sourceTree = "<group>"; };
+		84AE87262AD9A5330087446E /* PointsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListViewController.swift; sourceTree = "<group>"; };
+		84AE87282AD9A5340087446E /* PointsListTabItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListTabItemTableViewCell.swift; sourceTree = "<group>"; };
+		84AE87292AD9A5340087446E /* PointsListTabItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListTabItemViewModel.swift; sourceTree = "<group>"; };
+		84AE872A2AD9A5340087446E /* PointsListTabItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListTabItemViewController.swift; sourceTree = "<group>"; };
+		84AE872B2AD9A5340087446E /* PointsListTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListTabItem.swift; sourceTree = "<group>"; };
+		84AE87332AD9ABA30087446E /* PointsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsDetailsViewController.swift; sourceTree = "<group>"; };
+		84AE87352AD9ABB10087446E /* PointsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsDetailsViewModel.swift; sourceTree = "<group>"; };
 		996FA6151FF8B765EE8D7D9D /* Pods_Points.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Points.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +117,7 @@
 		84307FA32AD70945009279E9 /* Points */ = {
 			isa = PBXGroup;
 			children = (
+				84AE870C2AD9A4990087446E /* Presentation */,
 				843080072AD75890009279E9 /* Assembly */,
 				84307FB32AD70D4B009279E9 /* Data */,
 				84307FB22AD70D46009279E9 /* Domain */,
@@ -111,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				84307FB42AD70D57009279E9 /* PointsUseCase.swift */,
+				84AE87082AD9A10F0087446E /* PointsPaths.swift */,
+				84AE870A2AD9A11B0087446E /* PointsRouter.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -148,6 +171,45 @@
 				8430800A2AD758AB009279E9 /* PointsContracts.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		84AE870C2AD9A4990087446E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				84AE87322AD9AB920087446E /* Details */,
+				84AE87242AD9A5330087446E /* List */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		84AE87242AD9A5330087446E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				84AE87252AD9A5330087446E /* PointsListViewModel.swift */,
+				84AE87262AD9A5330087446E /* PointsListViewController.swift */,
+				84AE87272AD9A5330087446E /* TabItem */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		84AE87272AD9A5330087446E /* TabItem */ = {
+			isa = PBXGroup;
+			children = (
+				84AE87282AD9A5340087446E /* PointsListTabItemTableViewCell.swift */,
+				84AE87292AD9A5340087446E /* PointsListTabItemViewModel.swift */,
+				84AE872A2AD9A5340087446E /* PointsListTabItemViewController.swift */,
+				84AE872B2AD9A5340087446E /* PointsListTabItem.swift */,
+			);
+			path = TabItem;
+			sourceTree = "<group>";
+		};
+		84AE87322AD9AB920087446E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				84AE87332AD9ABA30087446E /* PointsDetailsViewController.swift */,
+				84AE87352AD9ABB10087446E /* PointsDetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		B7E59D9F2E7B55FD43A280ED /* Frameworks */ = {
@@ -270,8 +332,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				843080092AD7589F009279E9 /* PointsAssembly.swift in Sources */,
+				84AE872D2AD9A5340087446E /* PointsListViewController.swift in Sources */,
+				84AE87092AD9A10F0087446E /* PointsPaths.swift in Sources */,
 				841EA4B22AD8947F00A8354A /* LocalizableStrings.swift in Sources */,
+				84AE87342AD9ABA30087446E /* PointsDetailsViewController.swift in Sources */,
+				84AE872C2AD9A5340087446E /* PointsListViewModel.swift in Sources */,
+				84AE87362AD9ABB10087446E /* PointsDetailsViewModel.swift in Sources */,
+				84AE872E2AD9A5340087446E /* PointsListTabItemTableViewCell.swift in Sources */,
+				84AE87312AD9A5340087446E /* PointsListTabItem.swift in Sources */,
+				84AE870B2AD9A11B0087446E /* PointsRouter.swift in Sources */,
 				8430800B2AD758AB009279E9 /* PointsContracts.swift in Sources */,
+				84AE87302AD9A5340087446E /* PointsListTabItemViewController.swift in Sources */,
+				84AE872F2AD9A5340087446E /* PointsListTabItemViewModel.swift in Sources */,
 				843080062AD75838009279E9 /* PointsMockRemoteRepository.swift in Sources */,
 				84307FB72AD70D62009279E9 /* PointModel.swift in Sources */,
 				84307FB52AD70D57009279E9 /* PointsUseCase.swift in Sources */,

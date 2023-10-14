@@ -10,7 +10,6 @@ import Common
 import UIKit
 import RxSwift
 import RxCocoa
-import Points
 
 class PointsListTabItemViewController: CommonViewController<PointsListTabItemViewModel> {
     
@@ -49,6 +48,6 @@ class PointsListTabItemViewController: CommonViewController<PointsListTabItemVie
     }
     
     private func itemSelected(_ point: PointModel) {
-        print(point)
+        PointsRouter.routeToDetails(from: self, model: point)
     }
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 import Common
-import Points
 import RxSwift
 
 class PointsListTabItemViewModel: CommonViewModel {

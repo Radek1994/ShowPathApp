@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Points
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

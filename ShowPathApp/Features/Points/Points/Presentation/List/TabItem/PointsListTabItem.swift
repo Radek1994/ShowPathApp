@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Points
 import Common
 
 enum PointsListTabItem: CaseIterable {

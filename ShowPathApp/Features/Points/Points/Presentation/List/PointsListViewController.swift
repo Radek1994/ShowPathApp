@@ -10,19 +10,18 @@ import Common
 import UIKit
 import RxSwift
 import RxCocoa
-import Points
 
-class PointsListViewController: CommonViewController<PointsListViewModel> {
+public class PointsListViewController: CommonViewController<PointsListViewModel> {
     
     let titleLabel = UILabel()
-    let pagesSegmentedControl = CommonSegmentedControl(items: PointsListTabItem.allCases.map { $0.title() })
+    let pagesSegmentedControl = CommonSegmentedControl()
     let separator = UIView()
     let pageViewControllerContrainerView = UIView()
     let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     
-    let viewControllers = PointsListTabItem.allCases.map { $0.viewController() }
+    var viewControllers = [UIViewController]()
     
-    override func setupUI() {
+    public override func setupUI() {
         super.setupUI()
         
         view.addSubview(titleLabel)
@@ -30,24 +29,30 @@ class PointsListViewController: CommonViewController<PointsListViewModel> {
         view.addSubview(pageViewControllerContrainerView)
         embedViewController(pageViewController, inView: pageViewControllerContrainerView)
         
+        view.backgroundColor = .white
+        
         titleLabel.textAlignment = .center
         titleLabel.text = LocalizableStrings.Points.title.localized
+        
+        viewModel.segmentedControlItems
+            .enumerated()
+            .forEach { index, title in
+                pagesSegmentedControl.insertSegment(withTitle: title, at: index, animated: false)
+            }
         
         pageViewController.delegate = self
         pageViewController.dataSource = self
         
-        view.backgroundColor = .white
-        pageViewControllerContrainerView.backgroundColor = .blue
+        viewControllers = viewModel.viewControllers
         
         if let firstViewController = viewControllers.first {
             pageViewController.setViewControllers([firstViewController], direction: .forward, animated: true)
         }
         
-        pagesSegmentedControl.selectedSegmentTintColor = .red
         pagesSegmentedControl.selectedSegmentIndex = 0
     }
     
-    override func setupConstraints() {
+    public override func setupConstraints() {
         super.setupConstraints()
         
         titleLabel.snp.makeConstraints {
@@ -67,7 +72,7 @@ class PointsListViewController: CommonViewController<PointsListViewModel> {
         }
     }
     
-    override func setupRx() {
+    public override func setupRx() {
         super.setupRx()
         
         pagesSegmentedControl.rx
@@ -92,7 +97,7 @@ class PointsListViewController: CommonViewController<PointsListViewModel> {
 
 extension PointsListViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         guard let index = viewControllers.firstIndex(of: viewController) else { return nil }
         
@@ -103,7 +108,7 @@ extension PointsListViewController: UIPageViewControllerDataSource {
         return viewControllers[indexBefore]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let index = viewControllers.firstIndex(of: viewController) else { return nil }
         
@@ -117,7 +122,7 @@ extension PointsListViewController: UIPageViewControllerDataSource {
 }
 
 extension PointsListViewController: UIPageViewControllerDelegate {
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard completed else { return }
         
         guard let viewController = pageViewController.viewControllers?.first else { return }

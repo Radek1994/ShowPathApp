@@ -7,7 +7,6 @@
 
 import UIKit
 import Common
-import Points
 
 class PointsListTabItemTableViewCell: CommonTableViewCell<PointModel> {
     

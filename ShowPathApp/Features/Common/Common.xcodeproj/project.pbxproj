@@ -30,6 +30,8 @@
 		843080232AD83226009279E9 /* CommonSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080222AD83226009279E9 /* CommonSeparatorView.swift */; };
 		843080262AD83295009279E9 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080252AD83295009279E9 /* CommonView.swift */; };
 		843080282AD835CA009279E9 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080272AD835CA009279E9 /* UIViewController+extensions.swift */; };
+		84AE86F72AD956870087446E /* CommonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE86F62AD956870087446E /* CommonRouter.swift */; };
+		84AE87072AD95CB50087446E /* CommonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87062AD95CB50087446E /* CommonPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		843080222AD83226009279E9 /* CommonSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSeparatorView.swift; sourceTree = "<group>"; };
 		843080252AD83295009279E9 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		843080272AD835CA009279E9 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		84AE86F62AD956870087446E /* CommonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRouter.swift; sourceTree = "<group>"; };
+		84AE87062AD95CB50087446E /* CommonPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPath.swift; sourceTree = "<group>"; };
 		DE4A8A6CE64968683E58B48A /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,9 +108,10 @@
 		84307F052AD46AD0009279E9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8430800F2AD75BAC009279E9 /* Extensions */,
+				84AE86F52AD9567B0087446E /* Domain */,
 				84307F062AD46AD0009279E9 /* Common.h */,
 				84307FE22AD74768009279E9 /* Data */,
+				8430800F2AD75BAC009279E9 /* Extensions */,
 				84307F0D2AD46B2A009279E9 /* Presentation */,
 				84307FDE2AD74768009279E9 /* Resources */,
 				84307FE72AD74768009279E9 /* Utils */,
@@ -217,6 +222,15 @@
 				843080252AD83295009279E9 /* CommonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84AE86F52AD9567B0087446E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84AE86F62AD956870087446E /* CommonRouter.swift */,
+				84AE87062AD95CB50087446E /* CommonPath.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		99B4878C06169A7FB965797D /* Pods */ = {
@@ -344,11 +358,13 @@
 				84307FFD2AD74768009279E9 /* LocalizableStrings.swift in Sources */,
 				843080122AD75BD0009279E9 /* Array+extensions.swift in Sources */,
 				843080232AD83226009279E9 /* CommonSeparatorView.swift in Sources */,
+				84AE87072AD95CB50087446E /* CommonPath.swift in Sources */,
 				841EA4B02AD884E300A8354A /* CommonSegmentedControl.swift in Sources */,
 				84307FF52AD74768009279E9 /* RemoteRepository.swift in Sources */,
 				8430800E2AD75A73009279E9 /* CommonViewModel.swift in Sources */,
 				84307FFC2AD74768009279E9 /* Errors.swift in Sources */,
 				84307FF62AD74768009279E9 /* ViewModel.swift in Sources */,
+				84AE86F72AD956870087446E /* CommonRouter.swift in Sources */,
 				84307FF82AD74768009279E9 /* ConfigReader.swift in Sources */,
 				84307FFE2AD74768009279E9 /* Localizable.swift in Sources */,
 				841EA4D22AD89B9D00A8354A /* CommonTableViewCell.swift in Sources */,
