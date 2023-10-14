@@ -10,37 +10,45 @@ import MapKit
 import SnapKit
 import Common
 import Points
+import RxSwift
+import RxCocoa
 
 class MapViewController: CommonViewController<MapViewModel> {
     
+    let navBarLogoImageView = UIImageView(image: UIImage(named: "Logo"))
     let mapView = MKMapView()
     let distanceLabel = UILabel()
     let realDistanceLabel = UILabel()
     let filterButton = UIButton()
-    let pointsListContainerView = UIView()
+    let pointsListContainerView = PannableView()
     let pointsListViewController = PointsListViewController(viewModel: PointsListViewModel())
     
     override func setupUI() {
         super.setupUI()
         
         view.addSubview(mapView)
-        view.addSubview(pointsListContainerView)
+        mapView.addSubview(pointsListContainerView)
         embedViewController(pointsListViewController, inView: pointsListContainerView)
         
         mapView.delegate = self
         
-        pointsListContainerView.setCornerRadius(32)
+        pointsListContainerView.visibleHeight = 150.0
     }
     
     override func setupConstraints() {
         super.setupConstraints()
         
+        navBarLogoImageView.snp.makeConstraints {
+            $0.width.equalTo(navBarLogoImageView.snp.height)
+        }
+        
         mapView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.left.right.bottom.equalToSuperview()
         }
         
         pointsListContainerView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(500)
+            pointsListContainerView.heightConstraint = $0.height.equalTo(pointsListContainerView.visibleHeight)
             $0.left.right.bottom.equalToSuperview()
         }
     }
@@ -53,6 +61,25 @@ class MapViewController: CommonViewController<MapViewModel> {
                 self?.mapView.addOverlay(polyline)
                 self?.mapView.showPolyline(polyline)
             }.disposed(by: disposeBag)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.titleView = navBarLogoImageView
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .white
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        pointsListContainerView.maxHeight = mapView.bounds.height
     }
 }
 

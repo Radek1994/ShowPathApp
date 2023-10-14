@@ -14,7 +14,7 @@ import RxCocoa
 public class PointsListViewController: CommonViewController<PointsListViewModel> {
     
     let titleLabel = UILabel()
-    let pagesSegmentedControl = CommonSegmentedControl()
+    public let pagesSegmentedControl = CommonSegmentedControl()
     let separator = UIView()
     let pageViewControllerContrainerView = UIView()
     let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -57,7 +57,6 @@ public class PointsListViewController: CommonViewController<PointsListViewModel>
         
         titleLabel.snp.makeConstraints {
             $0.top.left.right.equalToSuperview().inset(16)
-//            $0.top.left.right.equalTo(view.safeAreaLayoutGuide).inset(16)
         }
         
         pagesSegmentedControl.snp.makeConstraints {

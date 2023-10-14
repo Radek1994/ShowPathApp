@@ -32,6 +32,7 @@
 		843080282AD835CA009279E9 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843080272AD835CA009279E9 /* UIViewController+extensions.swift */; };
 		84A761B52ADAF76300972EE3 /* CommonScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A761B42ADAF76300972EE3 /* CommonScrollView.swift */; };
 		84A761B72ADB18D500972EE3 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A761B62ADB18D500972EE3 /* UIView+extensions.swift */; };
+		84A761B92ADB361000972EE3 /* PannableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A761B82ADB361000972EE3 /* PannableView.swift */; };
 		84AE86F72AD956870087446E /* CommonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE86F62AD956870087446E /* CommonRouter.swift */; };
 		84AE87072AD95CB50087446E /* CommonPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87062AD95CB50087446E /* CommonPath.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		843080272AD835CA009279E9 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		84A761B42ADAF76300972EE3 /* CommonScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonScrollView.swift; sourceTree = "<group>"; };
 		84A761B62ADB18D500972EE3 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		84A761B82ADB361000972EE3 /* PannableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PannableView.swift; sourceTree = "<group>"; };
 		84AE86F62AD956870087446E /* CommonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRouter.swift; sourceTree = "<group>"; };
 		84AE87062AD95CB50087446E /* CommonPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPath.swift; sourceTree = "<group>"; };
 		DE4A8A6CE64968683E58B48A /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				843080252AD83295009279E9 /* CommonView.swift */,
+				84A761B82ADB361000972EE3 /* PannableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				84307FF72AD74768009279E9 /* NetworkAccessManager.swift in Sources */,
 				84307FFA2AD74768009279E9 /* ApplicationDependency.swift in Sources */,
 				84307F0F2AD46B3A009279E9 /* CommonViewController.swift in Sources */,
+				84A761B92ADB361000972EE3 /* PannableView.swift in Sources */,
 				84A761B52ADAF76300972EE3 /* CommonScrollView.swift in Sources */,
 				84307FFB2AD74768009279E9 /* Logger.swift in Sources */,
 				84307FFD2AD74768009279E9 /* LocalizableStrings.swift in Sources */,
