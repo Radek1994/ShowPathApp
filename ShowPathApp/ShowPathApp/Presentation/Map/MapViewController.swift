@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import SnapKit
 import Common
+import Points
 
 class MapViewController: CommonViewController<MapViewModel> {
     
@@ -17,14 +18,18 @@ class MapViewController: CommonViewController<MapViewModel> {
     let realDistanceLabel = UILabel()
     let filterButton = UIButton()
     let pointsListContainerView = UIView()
+    let pointsListViewController = PointsListViewController(viewModel: PointsListViewModel())
     
     override func setupUI() {
         super.setupUI()
         
         view.addSubview(mapView)
-        //view.addSubview(pointsListContainerView)
+        view.addSubview(pointsListContainerView)
+        embedViewController(pointsListViewController, inView: pointsListContainerView)
         
         mapView.delegate = self
+        
+        pointsListContainerView.setCornerRadius(32)
     }
     
     override func setupConstraints() {
@@ -34,9 +39,10 @@ class MapViewController: CommonViewController<MapViewModel> {
             $0.edges.equalToSuperview()
         }
         
-//        pointsListContainerView.snp.makeConstraints {
-//            $0.edges.equalToSuperview()
-//        }
+        pointsListContainerView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(500)
+            $0.left.right.bottom.equalToSuperview()
+        }
     }
     
     override func setupRx() {

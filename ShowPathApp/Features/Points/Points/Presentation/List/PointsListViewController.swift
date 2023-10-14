@@ -56,8 +56,8 @@ public class PointsListViewController: CommonViewController<PointsListViewModel>
         super.setupConstraints()
         
         titleLabel.snp.makeConstraints {
-//            $0.top.left.right.equalToSuperview().inset(16)
-            $0.top.left.right.equalTo(view.safeAreaLayoutGuide).inset(16)
+            $0.top.left.right.equalToSuperview().inset(16)
+//            $0.top.left.right.equalTo(view.safeAreaLayoutGuide).inset(16)
         }
         
         pagesSegmentedControl.snp.makeConstraints {

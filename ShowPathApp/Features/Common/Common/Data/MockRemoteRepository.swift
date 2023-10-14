@@ -21,7 +21,7 @@ open class MockRemoteRepository: RemoteRepository {
     public func readObject<T: Decodable>(ofType type: T.Type, fromFile fileName: String, withExtension: String) -> Single<T?> {
         return Observable.create { observer in
             let delay = Double.random(in: 1.0...2.0)
-            let shouldFail = Double.random(in: 0.0...1.0) > 0.9
+            let shouldFail = false//Double.random(in: 0.0...1.0) > 0.9
             
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 if shouldFail {

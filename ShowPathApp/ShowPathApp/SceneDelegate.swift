@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-//        let viewController = MapViewController(viewModel: MapViewModel())
-        let viewController = PointsListViewController(viewModel: PointsListViewModel())
+        let viewController = MapViewController(viewModel: MapViewModel())
+//        let viewController = PointsListViewController(viewModel: PointsListViewModel())
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window?.rootViewController = navigationController
