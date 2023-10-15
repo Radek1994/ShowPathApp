@@ -31,6 +31,8 @@ open class CommonViewController<ViewModelType: CommonViewModel>: UIViewControlle
     
     open func setupUI() {
         view.addSubview(loadingView)
+        
+        loadingView.layer.zPosition = 100
     }
     
     open func setupConstraints() {
@@ -64,7 +66,6 @@ open class CommonViewController<ViewModelType: CommonViewModel>: UIViewControlle
     }
     
     open func setLoading(_ isLoading: Bool) {
-        view.bringSubviewToFront(loadingView)
         loadingView.isHidden = !isLoading
     }
     

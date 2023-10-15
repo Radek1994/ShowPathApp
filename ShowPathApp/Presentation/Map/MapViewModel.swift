@@ -24,6 +24,8 @@ class MapViewModel: CommonViewModel {
     override func getData() {
         disposeBag = DisposeBag()
         
+        startLoading()
+        
         let pathObservable: Single<MKPolyline?>
         let distanceObservable: Single<Double>
         
@@ -40,15 +42,19 @@ class MapViewModel: CommonViewModel {
                 if let path = path {
                     self?.pathObservable.onNext(path)
                 }
+                self?.stopLoading()
             } onFailure: { [weak self] error in
                 self?.setError(error)
+                self?.stopLoading()
             }.disposed(by: disposeBag)
         
         distanceObservable
             .subscribe { [weak self] distance in
                 self?.handleDistance(distance)
+                self?.stopLoading()
             } onFailure: { [weak self] error in
                 self?.setError(error)
+                self?.stopLoading()
             }.disposed(by: disposeBag)
     }
     

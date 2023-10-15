@@ -21,4 +21,12 @@ open class CommonViewModel {
     }
     
     open func getData() { }
+    
+    public func startLoading() {
+        isLoading.onNext(true)
+    }
+    
+    public func stopLoading() {
+        isLoading.onNext(false)
+    }
 }
