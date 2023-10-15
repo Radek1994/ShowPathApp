@@ -70,6 +70,7 @@ public class PannableView: CommonView {
     
     func handleRecognizerEvent(_ recognizer: UIPanGestureRecognizer) {
         let diff = recognizer.translation(in: recognizer.view).y
+        let velocity = recognizer.velocity(in: recognizer.view).y
         
         var offset = currentOffset - diff
         offset = max(minVisibleOffset, min(maxOffset, offset))
@@ -78,7 +79,7 @@ public class PannableView: CommonView {
         
         switch recognizer.state {
         case .cancelled, .ended, .failed:
-            handleGluableForOffset(offset)
+            handleGluableForOffset(offset, velocity: velocity)
         default:
             break
         }
@@ -89,8 +90,8 @@ public class PannableView: CommonView {
         contentView.setCornerRadius(defaultCornerRadius * (1 - offset/maxOffset))
     }
     
-    private func handleGluableForOffset(_ offset: Double) {
-        let progress = offset/maxOffset
+    private func handleGluableForOffset(_ offset: Double, velocity: Double) {
+        let progress = (offset - velocity)/maxOffset
         
         let nextOffset: Double
         if progress > 0.33 {
