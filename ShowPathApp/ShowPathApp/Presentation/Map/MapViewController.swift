@@ -15,19 +15,20 @@ import RxCocoa
 
 class MapViewController: CommonViewController<MapViewModel> {
     
-    let navBarLogoImageView = UIImageView(image: UIImage(named: "Logo"))
     let mapView = MKMapView()
     let distanceLabel = UILabel()
     let realDistanceLabel = UILabel()
     let filterButton = UIButton()
-    let pointsListContainerView = PannableView(visibleHeight: 150.0)
+    let pointsListContainerView = PannableView(visibleHeight: MapViewController.pannableViewDefaultHeight)
     let pointsListViewController = PointsListViewController(viewModel: PointsListViewModel())
+    
+    private static let pannableViewDefaultHeight = 150.0
     
     override func setupUI() {
         super.setupUI()
         
         view.addSubview(mapView)
-        mapView.addSubview(pointsListContainerView)
+        view.addSubview(pointsListContainerView)
         embedViewController(pointsListViewController, inView: pointsListContainerView.contentView)
         
         mapView.delegate = self
@@ -35,10 +36,6 @@ class MapViewController: CommonViewController<MapViewModel> {
     
     override func setupConstraints() {
         super.setupConstraints()
-        
-        navBarLogoImageView.snp.makeConstraints {
-            $0.width.equalTo(navBarLogoImageView.snp.height)
-        }
         
         mapView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
@@ -64,14 +61,17 @@ class MapViewController: CommonViewController<MapViewModel> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.titleView = navBarLogoImageView
+        navigationItem.titleView = NavigationBarLogoView()
         
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.backgroundColor = .white
-        
-        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.standardAppearance.configureWithTransparentBackground()
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .white
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        mapView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: MapViewController.pannableViewDefaultHeight - view.safeAreaInsets.bottom, right: 0)
     }
 }
 
@@ -96,17 +96,7 @@ extension MapViewController: MKMapViewDelegate {
 extension MKMapView {
     
     func showPolyline(_ polyline: MKPolyline) {
-        let margin = 0.1
-        
         let rect = polyline.boundingMapRect
-        let widthMargin = rect.width * margin
-        let heightMargin = rect.height * margin
-        
-        let rectWithMargin = MKMapRect(x: rect.origin.x - widthMargin,
-                                       y: rect.origin.y - heightMargin,
-                                       width: rect.width + 2 * widthMargin,
-                                       height: rect.height + 2 * heightMargin)
-        
-        setRegion(MKCoordinateRegion(rectWithMargin), animated: true)
+        setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), animated: true)
     }
 }

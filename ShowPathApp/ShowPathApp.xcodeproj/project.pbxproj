@@ -18,6 +18,9 @@
 		84307F272AD46D64009279E9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84307F262AD46D64009279E9 /* MapViewModel.swift */; };
 		84307FAC2AD70988009279E9 /* Points.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84307FAB2AD70988009279E9 /* Points.framework */; };
 		84307FAD2AD70988009279E9 /* Points.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84307FAB2AD70988009279E9 /* Points.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C2BFF42ADC4C4200F0BFBC /* Path.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2BFF32ADC4C4200F0BFBC /* Path.framework */; };
+		84C2BFF52ADC4C4300F0BFBC /* Path.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2BFF32ADC4C4200F0BFBC /* Path.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C2C0062ADC58BD00F0BFBC /* NavigationBarLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84C2BFF52ADC4C4300F0BFBC /* Path.framework in Embed Frameworks */,
 				84307F202AD46C6E009279E9 /* Common.framework in Embed Frameworks */,
 				84307FAD2AD70988009279E9 /* Points.framework in Embed Frameworks */,
 			);
@@ -48,6 +52,8 @@
 		84307F242AD46CEE009279E9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		84307F262AD46D64009279E9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		84307FAB2AD70988009279E9 /* Points.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Points.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2BFF32ADC4C4200F0BFBC /* Path.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Path.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarLogoView.swift; sourceTree = "<group>"; };
 		E7CDB957DA067DA37580DEAE /* Pods_ShowPathApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowPathApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,6 +65,7 @@
 				84307FAC2AD70988009279E9 /* Points.framework in Frameworks */,
 				03901AA3B5446C99352BC2BC /* Pods_ShowPathApp.framework in Frameworks */,
 				84307F1F2AD46C6E009279E9 /* Common.framework in Frameworks */,
+				84C2BFF42ADC4C4200F0BFBC /* Path.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +115,7 @@
 		84307F222AD46CD9009279E9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				84C2C0042ADC58A800F0BFBC /* Common */,
 				84307F232AD46CDF009279E9 /* Map */,
 			);
 			path = Presentation;
@@ -122,9 +130,18 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		84C2C0042ADC58A800F0BFBC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8DAB2FAD5C8FB6AA9C8C7ED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C2BFF32ADC4C4200F0BFBC /* Path.framework */,
 				84307FAB2AD70988009279E9 /* Points.framework */,
 				84307F1E2AD46C6E009279E9 /* Common.framework */,
 				E7CDB957DA067DA37580DEAE /* Pods_ShowPathApp.framework */,
@@ -250,6 +267,7 @@
 				84307EA62AD33C69009279E9 /* AppDelegate.swift in Sources */,
 				84307F272AD46D64009279E9 /* MapViewModel.swift in Sources */,
 				84307F252AD46CEE009279E9 /* MapViewController.swift in Sources */,
+				84C2C0062ADC58BD00F0BFBC /* NavigationBarLogoView.swift in Sources */,
 				84307EA82AD33C69009279E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

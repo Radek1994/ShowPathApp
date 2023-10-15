@@ -29,6 +29,7 @@
 		84AE87312AD9A5340087446E /* PointsListTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE872B2AD9A5340087446E /* PointsListTabItem.swift */; };
 		84AE87342AD9ABA30087446E /* PointsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87332AD9ABA30087446E /* PointsDetailsViewController.swift */; };
 		84AE87362AD9ABB10087446E /* PointsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE87352AD9ABB10087446E /* PointsDetailsViewModel.swift */; };
+		84C2BFEB2ADC402D00F0BFBC /* PointsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2BFEA2ADC402D00F0BFBC /* PointsValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		84AE872B2AD9A5340087446E /* PointsListTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListTabItem.swift; sourceTree = "<group>"; };
 		84AE87332AD9ABA30087446E /* PointsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsDetailsViewController.swift; sourceTree = "<group>"; };
 		84AE87352AD9ABB10087446E /* PointsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsDetailsViewModel.swift; sourceTree = "<group>"; };
+		84C2BFEA2ADC402D00F0BFBC /* PointsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsValidator.swift; sourceTree = "<group>"; };
 		996FA6151FF8B765EE8D7D9D /* Pods_Points.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Points.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				843080052AD75838009279E9 /* PointsMockRemoteRepository.swift */,
+				84C2BFEA2ADC402D00F0BFBC /* PointsValidator.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				84AE872F2AD9A5340087446E /* PointsListTabItemViewModel.swift in Sources */,
 				843080062AD75838009279E9 /* PointsMockRemoteRepository.swift in Sources */,
 				84307FB72AD70D62009279E9 /* PointModel.swift in Sources */,
+				84C2BFEB2ADC402D00F0BFBC /* PointsValidator.swift in Sources */,
 				84307FB52AD70D57009279E9 /* PointsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

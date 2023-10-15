@@ -8,17 +8,22 @@
 import Foundation
 import RxSwift
 
-public struct PointsUseCase {
+public class PointsUseCase {
     let repository: PointsRemoteRepositoryContract = PointsMockRemoteRepository()
     
     public init() {
         
     }
-//    init(repository: PointsRemoteRepositoryContract) {
-//        self.repository = repository
-//    }
     
     public func getPoints() -> Single<[PointModel]> {
         return repository.getPoints()
+    }
+    
+    public func getValidatedPoints() -> Single<ValidatedPoints> {
+        return repository.getPoints()
+            .flatMap { points in
+                let validatedPoints = PointsValidator.validatePoints(points)
+                return Single.just(validatedPoints)
+            }
     }
 }

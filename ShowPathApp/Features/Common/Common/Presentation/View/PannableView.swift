@@ -13,20 +13,20 @@ import SnapKit
 
 public class PannableView: CommonView {
     
-    var panGestureRecognizer = UIPanGestureRecognizer()
-    var panDisposeBag = DisposeBag()
+    private var panGestureRecognizer = UIPanGestureRecognizer()
+    private var panDisposeBag = DisposeBag()
     public var contentView = UIView()
     
-    public var minVisibleOffset: Double
-    var currentOffset: Double
+    private var minVisibleOffset: Double
+    private var currentOffset: Double
     
-    var maxOffset: Double {
+    private var maxOffset: Double {
         return self.bounds.height
     }
     
     private var defaultCornerRadius = 32.0
     
-    var topConstraint: ConstraintMakerEditable? = nil
+    private var topConstraint: ConstraintMakerEditable? = nil
     
     public init(visibleHeight: Double) {
         self.minVisibleOffset = visibleHeight
@@ -59,7 +59,7 @@ public class PannableView: CommonView {
     }
     
     func addPanGesture() {
-        addGestureRecognizer(panGestureRecognizer)
+        contentView.addGestureRecognizer(panGestureRecognizer)
         
         panGestureRecognizer.rx
             .event
@@ -106,5 +106,9 @@ public class PannableView: CommonView {
         }
         
         currentOffset = nextOffset
+    }
+    
+    override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        return contentView.point(inside: convert(point, to: contentView), with: event)
     }
 }

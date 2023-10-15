@@ -15,24 +15,35 @@ def common_pods
   pod 'XCGLogger', '7.0.1'
 end
 
+def path_pods
+  pod 'RxCocoa', '6.5.0'
+  pod 'RxSwift', '6.5.0'
+  pod 'Swinject', '2.8.3'
+end
+
 def points_pods
   pod 'RxCocoa', '6.5.0'
   pod 'RxSwift', '6.5.0'
   pod 'SnapKit', '5.6.0'
   pod 'Swinject', '2.8.3'
-  pod 'XCGLogger', '7.0.1'
 end
 
 target 'ShowPathApp' do
   project 'ShowPathApp.xcodeproj'
   showpathapp_pods
   common_pods
+  path_pods
   points_pods
 end
 
 target 'Common' do
   project 'Features/Common/Common.xcodeproj'
   common_pods
+end
+
+target 'Path' do
+  project 'Features/Path/Path'
+  points_pods
 end
 
 target 'Points' do
