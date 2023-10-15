@@ -21,6 +21,8 @@ class PointsListTabItemViewController: CommonViewController<PointsListTabItemVie
         view.addSubview(tableView)
         
         PointsListTabItemTableViewCell.registerIn(tableView)
+        
+        tableView.separatorInset = .zero
     }
     
     override func setupConstraints() {

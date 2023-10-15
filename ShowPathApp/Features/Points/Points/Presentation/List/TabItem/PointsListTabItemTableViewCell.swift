@@ -25,7 +25,7 @@ class PointsListTabItemTableViewCell: CommonTableViewCell<PointModel> {
     }
     
     override func setupWithModel(_ model: PointModel) {
-        titleLabel.text = "\(model.longitude) \(model.latitude)"
+        titleLabel.text = "\(model.timestamp): \(model.longitude) \(model.latitude)"
     }
 }
 

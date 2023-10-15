@@ -17,6 +17,9 @@ public class PointsUseCase {
     
     public func getPoints() -> Single<[PointModel]> {
         return repository.getPoints()
+            .map { $0.sorted { p1, p2 in
+                p1.timestamp < p2.timestamp
+            }}
     }
     
     public func getValidatedPoints() -> Single<ValidatedPoints> {

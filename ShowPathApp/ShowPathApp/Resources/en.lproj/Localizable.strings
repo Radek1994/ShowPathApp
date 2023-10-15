@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ShowPathApp
+
+  Created by Radoslaw Slesarczyk on 15/10/2023.
+  
+*/
+
+"ShowPathApp.distance" = "Distance";
+"ShowPathApp.realDistance" = "Real distance";
