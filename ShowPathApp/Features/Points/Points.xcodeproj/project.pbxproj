@@ -119,12 +119,12 @@
 		84307FA32AD70945009279E9 /* Points */ = {
 			isa = PBXGroup;
 			children = (
-				84AE870C2AD9A4990087446E /* Presentation */,
 				843080072AD75890009279E9 /* Assembly */,
 				84307FB32AD70D4B009279E9 /* Data */,
 				84307FB22AD70D46009279E9 /* Domain */,
 				84307FB92AD745BA009279E9 /* Model */,
 				84307FA42AD70945009279E9 /* Points.h */,
+				84AE870C2AD9A4990087446E /* Presentation */,
 				843080022AD75757009279E9 /* Resources */,
 			);
 			path = Points;

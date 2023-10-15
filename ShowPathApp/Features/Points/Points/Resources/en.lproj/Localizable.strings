@@ -9,3 +9,5 @@
 "points.title" = "Points";
 "points.list.real" = "Real";
 "points.list.fake" = "Fake";
+"points.details.timestamp" = "Timestamp";
+"points.details.accuracy" = "Accuracy";

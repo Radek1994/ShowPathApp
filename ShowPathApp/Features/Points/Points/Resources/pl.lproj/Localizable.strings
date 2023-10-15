@@ -9,3 +9,5 @@
 "points.title" = "Punkty";
 "points.list.real" = "Prawdziwe";
 "points.list.fake" = "Fałszywe";
+"points.details.timestamp" = "Znacznik czasu";
+"points.details.accuracy" = "Dokładność";

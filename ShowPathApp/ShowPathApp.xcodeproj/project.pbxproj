@@ -108,10 +108,10 @@
 		84307EA42AD33C69009279E9 /* ShowPathApp */ = {
 			isa = PBXGroup;
 			children = (
-				84C2C00A2ADC847300F0BFBC /* Resources */,
 				84C2C0082ADC844C00F0BFBC /* Config */,
-				84C2C0072ADC844100F0BFBC /* Resources */,
 				84307F222AD46CD9009279E9 /* Presentation */,
+				84C2C00A2ADC847300F0BFBC /* Resources */,
+				84C2C0072ADC844100F0BFBC /* Resources */,
 			);
 			path = ShowPathApp;
 			sourceTree = "<group>";

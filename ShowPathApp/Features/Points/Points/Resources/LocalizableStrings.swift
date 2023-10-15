@@ -20,6 +20,13 @@ public extension LocalizableStrings {
             public var bundle: Bundle { return Bundle(for: PointsBundleClass.self) }
         }
         
+        public enum Details: String, Localizable {
+            case timestamp = "points.details.timestamp"
+            case accuracy = "points.details.accuracy"
+            
+            public var bundle: Bundle { return Bundle(for: PointsBundleClass.self) }
+        }
+        
         public var bundle: Bundle { return Bundle(for: PointsBundleClass.self) }
     }
 }

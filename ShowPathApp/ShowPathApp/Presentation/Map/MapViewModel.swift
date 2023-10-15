@@ -19,7 +19,7 @@ class MapViewModel: CommonViewModel {
     let pathObservable = PublishSubject<MKPolyline>()
     let distanceTextObservable = PublishSubject<String>()
     
-    var dataType: MapViewModelDataType = .fake
+    var dataType: MapViewModelDataType = .all
         
     override func getData() {
         disposeBag = DisposeBag()
@@ -66,7 +66,7 @@ class MapViewModel: CommonViewModel {
     
     public func switchDataType() {
         if dataType == .real {
-            dataType = .fake
+            dataType = .all
         } else {
             dataType = .real
         }
@@ -77,5 +77,5 @@ class MapViewModel: CommonViewModel {
 
 enum MapViewModelDataType {
     case real
-    case fake
+    case all
 }
