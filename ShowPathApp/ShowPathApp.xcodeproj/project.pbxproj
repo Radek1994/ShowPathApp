@@ -23,6 +23,27 @@
 		84C2C0062ADC58BD00F0BFBC /* NavigationBarLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */; };
 		84C2C00D2ADC849900F0BFBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84C2C00F2ADC849900F0BFBC /* Localizable.strings */; };
 		84C2C0132ADC84BF00F0BFBC /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0122ADC84BF00F0BFBC /* LocalizableStrings.swift */; };
+		84C2C02C2ADC997500F0BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84307EB02AD33C6A009279E9 /* LaunchScreen.storyboard */; };
+		84C2C02D2ADC99AB00F0BFBC /* NavigationBarLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */; };
+		84C2C02E2ADC99AE00F0BFBC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84307F242AD46CEE009279E9 /* MapViewController.swift */; };
+		84C2C02F2ADC99B000F0BFBC /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84307F262AD46D64009279E9 /* MapViewModel.swift */; };
+		84C2C0302ADC99B200F0BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84307EAE2AD33C6A009279E9 /* Assets.xcassets */; };
+		84C2C0312ADC99B600F0BFBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84C2C00F2ADC849900F0BFBC /* Localizable.strings */; };
+		84C2C0322ADC99B800F0BFBC /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0122ADC84BF00F0BFBC /* LocalizableStrings.swift */; };
+		84C2C0382ADC9AEE00F0BFBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84307EA72AD33C69009279E9 /* SceneDelegate.swift */; };
+		84C2C0392ADC9AF200F0BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84307EA52AD33C69009279E9 /* AppDelegate.swift */; };
+		84C2C03D2ADC9B8400F0BFBC /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C03C2ADC9B8400F0BFBC /* Common.framework */; };
+		84C2C03E2ADC9B8400F0BFBC /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C03C2ADC9B8400F0BFBC /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C2C0412ADC9B8800F0BFBC /* Path.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C0402ADC9B8800F0BFBC /* Path.framework */; };
+		84C2C0422ADC9B8800F0BFBC /* Path.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C0402ADC9B8800F0BFBC /* Path.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C2C0442ADC9B9200F0BFBC /* Points.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C0432ADC9B9200F0BFBC /* Points.framework */; };
+		84C2C0452ADC9B9200F0BFBC /* Points.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2C0432ADC9B9200F0BFBC /* Points.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C2C04A2ADC9D5100F0BFBC /* ApplicationDependencySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0492ADC9D5100F0BFBC /* ApplicationDependencySetup.swift */; };
+		84C2C04D2ADC9DCD00F0BFBC /* ApplicationDependencySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C04C2ADC9DCD00F0BFBC /* ApplicationDependencySetup.swift */; };
+		84C2C0522ADC9E0A00F0BFBC /* ShowPathAppMockAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C0512ADC9E0A00F0BFBC /* ShowPathAppMockAssembly.swift */; };
+		84C2C0542ADC9F4600F0BFBC /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C2C0532ADC9F4600F0BFBC /* Config.plist */; };
+		84C2C0562ADC9F7A00F0BFBC /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C2C0552ADC9F7A00F0BFBC /* Config.plist */; };
+		96281D043663B925D4F179FE /* Pods_ShowPathAppMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C9E712BF59F70C7D734C82 /* Pods_ShowPathAppMock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +56,19 @@
 				84C2BFF52ADC4C4300F0BFBC /* Path.framework in Embed Frameworks */,
 				84307F202AD46C6E009279E9 /* Common.framework in Embed Frameworks */,
 				84307FAD2AD70988009279E9 /* Points.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C2C03F2ADC9B8400F0BFBC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84C2C0452ADC9B9200F0BFBC /* Points.framework in Embed Frameworks */,
+				84C2C03E2ADC9B8400F0BFBC /* Common.framework in Embed Frameworks */,
+				84C2C0422ADC9B8800F0BFBC /* Path.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,9 +91,21 @@
 		84C2BFF32ADC4C4200F0BFBC /* Path.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Path.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C2C0052ADC58BD00F0BFBC /* NavigationBarLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarLogoView.swift; sourceTree = "<group>"; };
 		84C2C00E2ADC849900F0BFBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		84C2C0102ADC84AF00F0BFBC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		84C2C0112ADC84AF00F0BFBC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84C2C0122ADC84BF00F0BFBC /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		84C2C0182ADC989000F0BFBC /* ShowPathAppMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowPathAppMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2C0282ADC989300F0BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C2C03C2ADC9B8400F0BFBC /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2C0402ADC9B8800F0BFBC /* Path.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Path.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2C0432ADC9B9200F0BFBC /* Points.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Points.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C2C0492ADC9D5100F0BFBC /* ApplicationDependencySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencySetup.swift; sourceTree = "<group>"; };
+		84C2C04C2ADC9DCD00F0BFBC /* ApplicationDependencySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencySetup.swift; sourceTree = "<group>"; };
+		84C2C0512ADC9E0A00F0BFBC /* ShowPathAppMockAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPathAppMockAssembly.swift; sourceTree = "<group>"; };
+		84C2C0532ADC9F4600F0BFBC /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		84C2C0552ADC9F7A00F0BFBC /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		A3C9E712BF59F70C7D734C82 /* Pods_ShowPathAppMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowPathAppMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE016F5970DA392E4761EA5 /* Pods-ShowPathAppMock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowPathAppMock.debug.xcconfig"; path = "Target Support Files/Pods-ShowPathAppMock/Pods-ShowPathAppMock.debug.xcconfig"; sourceTree = "<group>"; };
+		DAFDDDB93EC81D709AE5E679 /* Pods-ShowPathAppMock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowPathAppMock.release.xcconfig"; path = "Target Support Files/Pods-ShowPathAppMock/Pods-ShowPathAppMock.release.xcconfig"; sourceTree = "<group>"; };
 		E7CDB957DA067DA37580DEAE /* Pods_ShowPathApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowPathApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +121,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84C2C0152ADC989000F0BFBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C2C0412ADC9B8800F0BFBC /* Path.framework in Frameworks */,
+				84C2C0442ADC9B9200F0BFBC /* Points.framework in Frameworks */,
+				96281D043663B925D4F179FE /* Pods_ShowPathAppMock.framework in Frameworks */,
+				84C2C03D2ADC9B8400F0BFBC /* Common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +140,8 @@
 			children = (
 				54A78EC76048F89BC72DB297 /* Pods-ShowPathApp.debug.xcconfig */,
 				4A5621D2B3531D812C29A1F1 /* Pods-ShowPathApp.release.xcconfig */,
+				CFE016F5970DA392E4761EA5 /* Pods-ShowPathAppMock.debug.xcconfig */,
+				DAFDDDB93EC81D709AE5E679 /* Pods-ShowPathAppMock.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -90,7 +149,10 @@
 		84307E992AD33C69009279E9 = {
 			isa = PBXGroup;
 			children = (
-				84307EA42AD33C69009279E9 /* ShowPathApp */,
+				84C2C0372ADC9A9E00F0BFBC /* Targets */,
+				84C2C0332ADC99C900F0BFBC /* Config */,
+				84307F222AD46CD9009279E9 /* Presentation */,
+				84C2C00A2ADC847300F0BFBC /* Resources */,
 				84307EA32AD33C69009279E9 /* Products */,
 				11B46BB2A0AC355FD7055A1F /* Pods */,
 				8DAB2FAD5C8FB6AA9C8C7ED1 /* Frameworks */,
@@ -101,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				84307EA22AD33C69009279E9 /* ShowPathApp.app */,
+				84C2C0182ADC989000F0BFBC /* ShowPathAppMock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,10 +171,8 @@
 		84307EA42AD33C69009279E9 /* ShowPathApp */ = {
 			isa = PBXGroup;
 			children = (
+				84C2C0482ADC9D3C00F0BFBC /* Setup */,
 				84C2C0082ADC844C00F0BFBC /* Config */,
-				84307F222AD46CD9009279E9 /* Presentation */,
-				84C2C00A2ADC847300F0BFBC /* Resources */,
-				84C2C0072ADC844100F0BFBC /* Resources */,
 			);
 			path = ShowPathApp;
 			sourceTree = "<group>";
@@ -142,20 +203,11 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		84C2C0072ADC844100F0BFBC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		84C2C0082ADC844C00F0BFBC /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				84307EB32AD33C6A009279E9 /* Info.plist */,
-				84307EB02AD33C6A009279E9 /* LaunchScreen.storyboard */,
-				84307EA72AD33C69009279E9 /* SceneDelegate.swift */,
-				84307EA52AD33C69009279E9 /* AppDelegate.swift */,
+				84C2C0532ADC9F4600F0BFBC /* Config.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -170,13 +222,79 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		84C2C0192ADC989100F0BFBC /* ShowPathAppMock */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C04E2ADC9DDE00F0BFBC /* Assembly */,
+				84C2C04B2ADC9DBF00F0BFBC /* Setup */,
+				84C2C0352ADC9A0000F0BFBC /* Config */,
+			);
+			path = ShowPathAppMock;
+			sourceTree = "<group>";
+		};
+		84C2C0332ADC99C900F0BFBC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84307EA52AD33C69009279E9 /* AppDelegate.swift */,
+				84307EA72AD33C69009279E9 /* SceneDelegate.swift */,
+				84307EB02AD33C6A009279E9 /* LaunchScreen.storyboard */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		84C2C0352ADC9A0000F0BFBC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C0282ADC989300F0BFBC /* Info.plist */,
+				84C2C0552ADC9F7A00F0BFBC /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		84C2C0372ADC9A9E00F0BFBC /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				84307EA42AD33C69009279E9 /* ShowPathApp */,
+				84C2C0192ADC989100F0BFBC /* ShowPathAppMock */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		84C2C0482ADC9D3C00F0BFBC /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C0492ADC9D5100F0BFBC /* ApplicationDependencySetup.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		84C2C04B2ADC9DBF00F0BFBC /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C04C2ADC9DCD00F0BFBC /* ApplicationDependencySetup.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		84C2C04E2ADC9DDE00F0BFBC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				84C2C0512ADC9E0A00F0BFBC /* ShowPathAppMockAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		8DAB2FAD5C8FB6AA9C8C7ED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C2C0432ADC9B9200F0BFBC /* Points.framework */,
+				84C2C0402ADC9B8800F0BFBC /* Path.framework */,
+				84C2C03C2ADC9B8400F0BFBC /* Common.framework */,
 				84C2BFF32ADC4C4200F0BFBC /* Path.framework */,
 				84307FAB2AD70988009279E9 /* Points.framework */,
 				84307F1E2AD46C6E009279E9 /* Common.framework */,
 				E7CDB957DA067DA37580DEAE /* Pods_ShowPathApp.framework */,
+				A3C9E712BF59F70C7D734C82 /* Pods_ShowPathAppMock.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,6 +322,26 @@
 			productReference = 84307EA22AD33C69009279E9 /* ShowPathApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		84C2C0172ADC989000F0BFBC /* ShowPathAppMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C2C0292ADC989300F0BFBC /* Build configuration list for PBXNativeTarget "ShowPathAppMock" */;
+			buildPhases = (
+				36AD0678B48A193AA3201B84 /* [CP] Check Pods Manifest.lock */,
+				84C2C0142ADC989000F0BFBC /* Sources */,
+				84C2C0152ADC989000F0BFBC /* Frameworks */,
+				84C2C0162ADC989000F0BFBC /* Resources */,
+				13B3AB59E8303989C90A9765 /* [CP] Embed Pods Frameworks */,
+				84C2C03F2ADC9B8400F0BFBC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShowPathAppMock;
+			productName = ShowPathAppMock;
+			productReference = 84C2C0182ADC989000F0BFBC /* ShowPathAppMock.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +353,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					84307EA12AD33C69009279E9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					84C2C0172ADC989000F0BFBC = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -234,6 +375,7 @@
 			projectRoot = "";
 			targets = (
 				84307EA12AD33C69009279E9 /* ShowPathApp */,
+				84C2C0172ADC989000F0BFBC /* ShowPathAppMock */,
 			);
 		};
 /* End PBXProject section */
@@ -243,15 +385,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C2C0542ADC9F4600F0BFBC /* Config.plist in Resources */,
 				84307EB22AD33C6A009279E9 /* LaunchScreen.storyboard in Resources */,
 				84C2C00D2ADC849900F0BFBC /* Localizable.strings in Resources */,
 				84307EAF2AD33C6A009279E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84C2C0162ADC989000F0BFBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C2C0562ADC9F7A00F0BFBC /* Config.plist in Resources */,
+				84C2C0302ADC99B200F0BFBC /* Assets.xcassets in Resources */,
+				84C2C0312ADC99B600F0BFBC /* Localizable.strings in Resources */,
+				84C2C02C2ADC997500F0BFBC /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13B3AB59E8303989C90A9765 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowPathAppMock/Pods-ShowPathAppMock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowPathAppMock/Pods-ShowPathAppMock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShowPathAppMock/Pods-ShowPathAppMock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36AD0678B48A193AA3201B84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShowPathAppMock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		51F9EC6114EE127955CB8299 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,9 +494,25 @@
 				84307EA62AD33C69009279E9 /* AppDelegate.swift in Sources */,
 				84C2C0132ADC84BF00F0BFBC /* LocalizableStrings.swift in Sources */,
 				84307F272AD46D64009279E9 /* MapViewModel.swift in Sources */,
+				84C2C04A2ADC9D5100F0BFBC /* ApplicationDependencySetup.swift in Sources */,
 				84307F252AD46CEE009279E9 /* MapViewController.swift in Sources */,
 				84C2C0062ADC58BD00F0BFBC /* NavigationBarLogoView.swift in Sources */,
 				84307EA82AD33C69009279E9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C2C0142ADC989000F0BFBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C2C0392ADC9AF200F0BFBC /* AppDelegate.swift in Sources */,
+				84C2C0522ADC9E0A00F0BFBC /* ShowPathAppMockAssembly.swift in Sources */,
+				84C2C0382ADC9AEE00F0BFBC /* SceneDelegate.swift in Sources */,
+				84C2C02D2ADC99AB00F0BFBC /* NavigationBarLogoView.swift in Sources */,
+				84C2C04D2ADC9DCD00F0BFBC /* ApplicationDependencySetup.swift in Sources */,
+				84C2C02E2ADC99AE00F0BFBC /* MapViewController.swift in Sources */,
+				84C2C02F2ADC99B000F0BFBC /* MapViewModel.swift in Sources */,
+				84C2C0322ADC99B800F0BFBC /* LocalizableStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +523,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				84307EB12AD33C6A009279E9 /* Base */,
-				84C2C0102ADC84AF00F0BFBC /* pl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -456,7 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShowPathApp/Config/Info.plist;
+				INFOPLIST_FILE = Targets/ShowPathApp/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShowPathApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -487,7 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShowPathApp/Config/Info.plist;
+				INFOPLIST_FILE = Targets/ShowPathApp/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShowPathApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -499,6 +707,70 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.radekslesarczyk.ShowPathApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		84C2C02A2ADC989300F0BFBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE016F5970DA392E4761EA5 /* Pods-ShowPathAppMock.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Targets/ShowPathAppMock/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShowPathAppMock;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radekslesarczyk.ShowPathAppMock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		84C2C02B2ADC989300F0BFBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFDDDB93EC81D709AE5E679 /* Pods-ShowPathAppMock.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Targets/ShowPathAppMock/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShowPathAppMock;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radekslesarczyk.ShowPathAppMock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -526,6 +798,15 @@
 			buildConfigurations = (
 				84307EB72AD33C6A009279E9 /* Debug */,
 				84307EB82AD33C6A009279E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C2C0292ADC989300F0BFBC /* Build configuration list for PBXNativeTarget "ShowPathAppMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C2C02A2ADC989300F0BFBC /* Debug */,
+				84C2C02B2ADC989300F0BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

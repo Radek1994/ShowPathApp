@@ -51,11 +51,13 @@ open class CommonViewController<ViewModelType: CommonViewModel>: UIViewControlle
         disposeBag = DisposeBag()
         
         viewModel.isLoading
+            .observe(on: MainScheduler.instance)
             .subscribe { [weak self] isLoading in
                 self?.setLoading(isLoading)
             }.disposed(by: disposeBag)
         
         viewModel.error
+            .observe(on: MainScheduler.instance)
             .subscribe { [weak self] error in
                 self?.showError(error)
             }.disposed(by: disposeBag)
@@ -67,6 +69,8 @@ open class CommonViewController<ViewModelType: CommonViewModel>: UIViewControlle
     }
     
     open func showError(_ error: CommonError) {
-        print(error)
+        let alert = UIAlertController(title: LocalizableStrings.Common.error.localized, message: error.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }

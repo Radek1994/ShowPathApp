@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-protocol PointsRemoteRepositoryContract {
+public protocol PointsRemoteRepositoryContract {
     func getPoints() -> Single<[PointModel]>
 }

@@ -9,9 +9,9 @@ import Foundation
 import Common
 import RxSwift
 
-class PointsMockRemoteRepository: MockRemoteRepository, PointsRemoteRepositoryContract {
+public class PointsMockRemoteRepository: MockRemoteRepository, PointsRemoteRepositoryContract {
     
-    func getPoints() -> Single<[PointModel]> {
+    public func getPoints() -> Single<[PointModel]> {
         return readObject(ofType: [PointModel].self, fromFile: "path", withExtension: "json").map { $0 ?? [] }
     }
 }

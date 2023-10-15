@@ -7,6 +7,9 @@ workspace 'ShowPathApp.xcworkspace'
 def showpathapp_pods
 end
 
+def showpathappmock_pods
+end
+
 def common_pods
   pod 'RxCocoa', '6.5.0'
   pod 'RxSwift', '6.5.0'
@@ -31,6 +34,14 @@ end
 target 'ShowPathApp' do
   project 'ShowPathApp.xcodeproj'
   showpathapp_pods
+  common_pods
+  path_pods
+  points_pods
+end
+
+target 'ShowPathAppMock' do
+  project 'ShowPathApp.xcodeproj'
+  showpathappmock_pods
   common_pods
   path_pods
   points_pods

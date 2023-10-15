@@ -7,12 +7,13 @@
 
 import Foundation
 import RxSwift
+import Common
 
 public class PointsUseCase {
-    let repository: PointsRemoteRepositoryContract = PointsMockRemoteRepository()
+    let repository: PointsRemoteRepositoryContract
     
     public init() {
-        
+        self.repository = ApplicationDependency.shared.resolve(PointsRemoteRepositoryContract.self)!
     }
     
     public func getPoints() -> Single<[PointModel]> {

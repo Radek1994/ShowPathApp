@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import Swinject
+
+public class PointsAssembly: Assembly {
+    
+    public init() { }
+    
+    public func assemble(container: Container) {
+        
+        container.register(PointsRemoteRepositoryContract.self) { _ in
+            return PointsRemoteRepository()
+        }
+    }
+}
+
