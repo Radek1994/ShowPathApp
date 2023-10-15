@@ -15,21 +15,25 @@ public class PannableView: CommonView {
     
     var panGestureRecognizer = UIPanGestureRecognizer()
     var panDisposeBag = DisposeBag()
+    public var contentView = UIView()
     
-    public var heightConstraint: ConstraintMakerEditable? = nil
-    public var visibleHeight = 0.0 {
-        didSet {
-            currentHeight = visibleHeight
-        }
+    public var minVisibleOffset: Double
+    var currentOffset: Double
+    
+    var maxOffset: Double {
+        return self.bounds.height
     }
-    var currentHeight = 0.0
-    public var maxHeight = 0.0
+    
     private var defaultCornerRadius = 32.0
     
-    public override init() {
+    var topConstraint: ConstraintMakerEditable? = nil
+    
+    public init(visibleHeight: Double) {
+        self.minVisibleOffset = visibleHeight
+        self.currentOffset = visibleHeight
+        
         super.init()
         
-        setupUI()
         addPanGesture()
     }
     
@@ -40,7 +44,18 @@ public class PannableView: CommonView {
     override public func setupUI() {
         super.setupUI()
         
-        setCornerRadius(defaultCornerRadius)
+        addSubview(contentView)
+        contentView.setCornerRadius(defaultCornerRadius)
+    }
+    
+    public override func setupConstraints() {
+        super.setupConstraints()
+        
+        contentView.snp.makeConstraints {
+            topConstraint = $0.top.equalTo(self.snp.bottom).offset(-minVisibleOffset)
+            $0.left.right.equalToSuperview()
+            $0.height.equalToSuperview()
+        }
     }
     
     func addPanGesture() {
@@ -56,24 +71,39 @@ public class PannableView: CommonView {
     func handleRecognizerEvent(_ recognizer: UIPanGestureRecognizer) {
         let diff = recognizer.translation(in: recognizer.view).y
         
-        var height = currentHeight - diff
-        height = max(visibleHeight, min(maxHeight, height))
+        var offset = currentOffset - diff
+        offset = max(minVisibleOffset, min(maxOffset, offset))
         
-        updateHeight(height)
+        updateOffset(offset)
         
         switch recognizer.state {
         case .cancelled, .ended, .failed:
-            currentHeight = height
+            handleGluableForOffset(offset)
         default:
             break
         }
     }
     
-    public func updateHeight(_ height: Double) {
-        setCornerRadius(defaultCornerRadius * (1 - height / maxHeight))
+    private func updateOffset(_ offset: Double) {
+        topConstraint?.constraint.update(offset: -offset)
+        contentView.setCornerRadius(defaultCornerRadius * (1 - offset/maxOffset))
+    }
+    
+    private func handleGluableForOffset(_ offset: Double) {
+        let progress = offset/maxOffset
         
-        snp.updateConstraints {
-            $0.height.equalTo(height)
+        let nextOffset: Double
+        if progress > 0.33 {
+            nextOffset = maxOffset
+        } else {
+            nextOffset = minVisibleOffset
         }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.updateOffset(nextOffset)
+            self.layoutIfNeeded()
+        }
+        
+        currentOffset = nextOffset
     }
 }

@@ -20,7 +20,7 @@ class MapViewController: CommonViewController<MapViewModel> {
     let distanceLabel = UILabel()
     let realDistanceLabel = UILabel()
     let filterButton = UIButton()
-    let pointsListContainerView = PannableView()
+    let pointsListContainerView = PannableView(visibleHeight: 150.0)
     let pointsListViewController = PointsListViewController(viewModel: PointsListViewModel())
     
     override func setupUI() {
@@ -28,11 +28,9 @@ class MapViewController: CommonViewController<MapViewModel> {
         
         view.addSubview(mapView)
         mapView.addSubview(pointsListContainerView)
-        embedViewController(pointsListViewController, inView: pointsListContainerView)
+        embedViewController(pointsListViewController, inView: pointsListContainerView.contentView)
         
         mapView.delegate = self
-        
-        pointsListContainerView.visibleHeight = 150.0
     }
     
     override func setupConstraints() {
@@ -48,7 +46,7 @@ class MapViewController: CommonViewController<MapViewModel> {
         }
         
         pointsListContainerView.snp.makeConstraints {
-            pointsListContainerView.heightConstraint = $0.height.equalTo(pointsListContainerView.visibleHeight)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.left.right.bottom.equalToSuperview()
         }
     }
@@ -74,12 +72,6 @@ class MapViewController: CommonViewController<MapViewModel> {
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        pointsListContainerView.maxHeight = mapView.bounds.height
     }
 }
 
